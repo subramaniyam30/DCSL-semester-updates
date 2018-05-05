@@ -1,0 +1,11 @@
+In the README file, say first the high level things about the repo and then some details about how to get the code to run.
+
+High level things:
+1 or 2 paragraphs about what the repo accomplishes. If there is a paper or a submission that goes with this repo, mention that here.
+
+Low level things:
+This is a typical README that goes into a source distribution. 
+* What are the dependencies? 
+* What are the steps needed to get this code to run? 
+* What are the sample evaluation scripts? 
+* What will the output file look like?
