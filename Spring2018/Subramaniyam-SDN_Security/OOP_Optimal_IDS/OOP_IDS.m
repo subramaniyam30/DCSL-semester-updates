@@ -121,6 +121,19 @@ classdef OOP_IDS < handle
                 obj.max_IDS = sum(obj.IDSquality ~= 0);  % No. of locations where IDS can be placed.
         end
         
+        function calculate_IDSvalue_quality(obj,B)
+            rng shuffle;
+            IDSvalue = zeros(1,numnodes(obj.networkGraph));
+            for i = 1:numnodes(obj.networkGraph)
+                
+                IDSvalue(i) = obj.baseValue + B*(rand()-0.5);
+            end
+                %IDSvalue(obj.crownJewel) = 0;
+                IDSvalue(1) = 0;    %First node is input node or dummy node to split traffic.
+                obj.IDSquality=IDSvalue;
+                obj.max_IDS = sum(obj.IDSquality ~= 0);  % No. of locations where IDS can be placed.
+        end
+        
         %----------------Re caculate whenever edge weight changes ------
         %calculates the traffic distribution through the network graph.
         function calculate_baseline_traffics(obj)
